@@ -1,5 +1,5 @@
 #Setting directories
-shared=/media/sf_shared_linux;proj=~/projects/hmm_LB1/
+shared=/media/sf_shared_linux/lab_bioinformatics/LB1_project;proj=~/projects/hmm_LB1/
 
 #Getting the files from pdb-e fold
 mv pdb-e_fold_3tgi.txt ~/projects/hmm_LB1/
@@ -35,11 +35,16 @@ grep -E "^ *[0-9]" $proj/proteins/pdb-e_fold_3tgi.txt| awk '{if ($4>=3 && $5<=1)
 #rmsd <=1
 
 #final file obtained
-mv rcsb_pdb_custom_report_20220412080009.csv $proj/proteins
+
+
+#Processing csv file
 
 
 
 ###Extracting from pdb advanced search
+mv rcsb_pdb_custom_report_20220412080009.csv $proj/proteins
+
+
 
 
 echo "a, b" |tr -d " "|tr "," "\"
