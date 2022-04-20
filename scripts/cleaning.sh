@@ -37,12 +37,16 @@ grep -E "^ *[0-9]" $proj/proteins/pdb-e_fold_3tgi.txt| awk '{if ($4>=3 && $5<=1)
 #final file obtained
 
 
+#Advanced PDB search
 #Processing csv file
-
-
 
 ###Extracting from pdb advanced search
 mv rcsb_pdb_custom_report_20220412080009.csv $proj/proteins
+
+
+#pandas package used to extract useful data from .csv file
+#check jupyter notebook for details
+
 
 
 
