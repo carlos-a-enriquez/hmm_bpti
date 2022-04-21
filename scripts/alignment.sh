@@ -2,7 +2,7 @@
 shared=/media/sf_shared_linux/lab_bioinformatics/LB1_project;proj=~/projects/hmm_LB1/;db=~/projects/databases
 
 ### preparing input for e-fold alignment
-rep ">" rep-cluster95_v2.fasta |cut -d " " -f 1 |tr -d ">"|tr "_" ":" >sel_chains.txt
+grep ">" rep-cluster95_v2.fasta |cut -d " " -f 1 |tr -d ">"|tr "_" ":" >sel_chains.txt
 
 #This is extracted from the fasta file
 '''
@@ -22,10 +22,19 @@ rep ">" rep-cluster95_v2.fasta |cut -d " " -f 1 |tr -d ">"|tr "_" ":" >sel_chain
 
 '''
 
+#3tgi:I was manually added
+cp sel_chains.txt $shared
+
+
 #recovering pdb-e fold fasta alignment
 cp $shared/alignment/fasta.seq ./struct_alignment.seq
 
 
 
 #fixing the alignment to get it all in one line
-awk '{if (substr($0,1,1)==">") {print "\n"$0} else {printf "%s",$0}}' ali3d.txt
+awk '{if (substr($0,1,1)==">") {print "\n"$0} else {printf "%s",$0}}' ali3d.txt  #not necessary in my case
+
+#NOTE: spaces manually eliminated between aligned sequences 
+
+#Running hmmbuild
+hmmbuild bpti.hmm struct_alignment.seq

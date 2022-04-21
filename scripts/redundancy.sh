@@ -47,6 +47,8 @@ less rep-cluster95.fasta
 grep -A 1 "^>4bnr" rep-cluster95.fasta |grep -v "^>4bnr" |wc
 '1       1     101'                                             #in fact, it is too long. I will delete it.
 
+grep ">" rep-cluster95.fasta |awk '{if(substr($3,8,length($3))+0<100) {print $0}}'|wc  #This is an automated way to check for sequences that are too long (checks the 'length' field in header)
+
 #sequence 4bnr deleted...
 
 #Final set: 26 lines, 13 sequences
