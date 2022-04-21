@@ -46,7 +46,14 @@ mv rcsb_pdb_custom_report_20220412080009.csv $proj/proteins
 
 #pandas package used to extract useful data from .csv file
 #check jupyter notebook for details
+./adv_pdb_parsing.py ../proteins/rcsb_pdb_custom_report_20220412080009.csv |wc #299 rows as expected
+./adv_pdb_parsing.py ../proteins/rcsb_pdb_custom_report_20220412080009.csv >../proteins/rcsb_pdb_cleaned.txt
 
+
+
+
+
+##### Now extracting data from pfam
 
 
 
