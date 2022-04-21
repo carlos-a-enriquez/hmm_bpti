@@ -83,5 +83,7 @@ comm -12 <(awk {'print toupper($0)'} pdb-e_final_list.txt) <(sort rcsb_pdb_clean
 #comm_pdb vs pfam
 comm -12 comm_pdb_list.txt <(sort -u pfam_pf00014.clean.txt) >three_db_match.txt
 
+###Results: 144 id:chain pairs
+
 
 echo "a, b" |tr -d " "|tr "," "\"
