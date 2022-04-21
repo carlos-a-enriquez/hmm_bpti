@@ -55,7 +55,33 @@ mv rcsb_pdb_custom_report_20220412080009.csv $proj/proteins
 
 ##### Now extracting data from pfam
 
+'''
+Note:
+The structure data can be copied and pasted directly from the website.
+Then, the cleaning procedure involves filling NA rows, exporting as a csv,
+selecting the protein-id and chain columns and creating the new concatenated
+column.
 
+Omid has saved us some time by obtaining the clean csv. However, we still need
+to add the concatanated column. Then, we must print that column into a text file,
+which will be used downstream to compare all 3 datasets.
+'''
+
+pip install openpyxl
+./pfam_parse.py ../proteins/pfam_raw.xlsx >../proteins/pfam_pf00014.clean.txt
+
+
+
+#### Now, lets find the match of all 3 databases
+
+cut -b 8-13 pdb-e_fold_3tgi_filtered.txt |sort >pdb-e_final_list.txt #gets the prot-id:chain and sorts (unique: no repetitions, not needed because I include the chains)
+#by checking
+
+#pdb-e fold vs pdb
+comm -12 <(awk {'print toupper($0)'} pdb-e_final_list.txt) <(sort rcsb_pdb_cleaned.txt) >comm_pdb_list.txt
+
+#comm_pdb vs pfam
+comm -12 comm_pdb_list.txt <(sort -u pfam_pf00014.clean.txt) >three_db_match.txt
 
 
 echo "a, b" |tr -d " "|tr "," "\"
