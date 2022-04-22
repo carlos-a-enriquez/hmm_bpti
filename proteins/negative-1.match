@@ -1,0 +1,22 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+P0DV05               -          struct_alignment     -            1.2e-23   86.6   3.2   1.3e-23   86.6   3.2   1.0   1   0   0   1   1   1   1 -
+P0DV04               -          struct_alignment     -            4.9e-23   84.7   5.0   5.2e-23   84.6   5.0   1.0   1   0   0   1   1   1   1 -
+P84555               -          struct_alignment     -             0.0004   24.1   0.0    0.0004   24.1   0.0   1.0   1   0   0   1   1   1   1 -
+P0DJ63               -          struct_alignment     -             0.0058   20.4   0.1    0.0058   20.4   0.1   1.0   1   0   0   1   1   1   1 -
+P85039               -          struct_alignment     -              0.061   17.2   0.0     0.061   17.2   0.0   1.0   1   0   0   1   1   1   0 -
+P85040               -          struct_alignment     -               0.13   16.1   0.1      0.13   16.1   0.1   1.0   1   0   0   1   1   1   0 -
+P71089               -          struct_alignment     -                2.6   11.9   0.0       4.6   11.1   0.0   1.4   1   0   0   1   1   1   0 -
+C5H8E7               -          struct_alignment     -                9.4   10.1   8.2       2.4   12.1   4.8   1.7   1   1   1   2   2   2   0 -
+P36235               -          struct_alignment     -                9.5   10.1   8.4        14    9.6   8.4   1.4   1   1   0   1   1   1   0 -
+#
+# Program:         hmmsearch
+# Version:         3.3.2 (Nov 2020)
+# Pipeline mode:   SEARCH
+# Query file:      bpti.hmm
+# Target file:     negative-1.fasta
+# Option settings: hmmsearch --tblout negative-1.match --noali bpti.hmm negative-1.fasta 
+# Current dir:     /home/carloskez/projects/hmm_LB1/proteins
+# Date:            Fri Apr 22 12:42:49 2022
+# [ok]

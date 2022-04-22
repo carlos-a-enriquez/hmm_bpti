@@ -1,0 +1,21 @@
+#                                                               --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name        accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+P0DV03               -          struct_alignment     -            1.5e-22   83.2   4.0   1.6e-22   83.1   4.0   1.0   1   0   0   1   1   1   1 -
+P0DV06               -          struct_alignment     -            9.3e-22   80.6   4.6   9.8e-22   80.5   4.6   1.0   1   0   0   1   1   1   1 -
+P83605               -          struct_alignment     -             0.0039   21.0   0.3    0.0039   21.0   0.3   1.0   1   0   0   1   1   1   1 -
+P56409               -          struct_alignment     -               0.21   15.5   0.3      0.21   15.5   0.3   2.6   3   0   0   3   3   3   0 -
+P84556               -          struct_alignment     -               0.25   15.2   0.1      0.26   15.1   0.1   1.1   1   0   0   1   1   1   0 -
+P0DV02               -          struct_alignment     -               0.49   14.3   0.2      0.49   14.3   0.2   1.0   1   0   0   1   1   1   0 -
+P0DM47               -          struct_alignment     -                0.8   13.6   0.3       0.8   13.6   0.3   1.0   1   0   0   1   1   1   0 -
+P0DV07               -          struct_alignment     -                2.2   12.2   0.1       2.2   12.2   0.1   1.0   1   0   0   1   1   1   0 -
+#
+# Program:         hmmsearch
+# Version:         3.3.2 (Nov 2020)
+# Pipeline mode:   SEARCH
+# Query file:      bpti.hmm
+# Target file:     negative-2.fasta
+# Option settings: hmmsearch --tblout negative-2.match --noali bpti.hmm negative-2.fasta 
+# Current dir:     /home/carloskez/projects/hmm_LB1/proteins
+# Date:            Fri Apr 22 12:43:11 2022
+# [ok]
