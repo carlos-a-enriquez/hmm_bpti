@@ -34,7 +34,4 @@ cp $shared/alignment/fasta.seq ./struct_alignment.seq
 #fixing the alignment to get it all in one line
 awk '{if (substr($0,1,1)==">") {print "\n"$0} else {printf "%s",$0}}' ali3d.txt  #not necessary in my case
 
-#NOTE: spaces manually eliminated between aligned sequences 
-
-#Running hmmbuild
-hmmbuild bpti.hmm struct_alignment.seq
+#NOTE: spaces manually eliminated between aligned sequences
