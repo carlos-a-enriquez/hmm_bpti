@@ -9,7 +9,7 @@ def parse_fasta(fasta):
             if line.find('>')==0:  #The header starts with the ">"
                 pid=line.split('|')[1] #obtains the identifier
             else:
-                d[pid]=d.get(pid,'')+line.rstrip() #If this is not the header, then it is the sequence and most be added to the value of the previously found pid
+                d[pid]=d.get(pid,'')+line.rstrip() #If this is not the header, then it is the sequence and must be added to the value of the previously found pid
     return d
 
 
@@ -22,3 +22,13 @@ if __name__ == '__main__':
         if pid in d:
             print (">"+pid)
             print(d[pid])
+
+
+'''
+In summary, the first file (text file) will provide the list of ids as a single column.
+The list of ids is extracted in line 20.
+
+Then, we obtain the sequences from the second file (.fasta format) that correspond
+to the ids of the first file. 
+
+'''
