@@ -116,8 +116,37 @@ cat positive2.class negative2.class >set-2.class
 #Optimization table
 ../scripts/accuracy.py set-1.class 0.001
 
-for i in 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10; do ../scripts/accuracy.py set-1.class $i; done >opt-table-1.txt
-for i in 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10; do ../scripts/accuracy.py set-2.class $i; done >opt-table-2.txt
+for i in 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10 1e-11 1e-12; do ../scripts/accuracy.py set-1.class $i; done >opt-table-1.txt
+for i in 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10 1e-11 1e-12; do ../scripts/accuracy.py set-2.class $i; done >opt-table-2.txt
 
+less opt-table-1.txt
+'TH: 1e-08 provides the highest MCC'
+
+less opt-table-2.txt
+'TH: 1e-08 and on provides the highest MCC' #check the issue regarding FP
+
+#We have a problem with false positives that are not eliminated with a more stringent threshold
+export LC_ALL=C
+awk '{if($NF==0) {print $0}}' <(sort -gk2 set-2.class) |less #Problematic pids found with this command
+
+'
+P0DV03 5.6e-28 0
+P0DV06 3.4e-27 0
+'
+#It appears that they were incorrectly classified due to a lack of pfam annotation
+
+#correcting the error
+awk '{if($1=="P0DV03") {print $1,$2,1} else {if($1=="P0DV06") {print $1,$2,1} else{print $0}}}' set-2.class >set-2-corrected.class
+
+less opt-table-2-corrected.txt
+'1e-08 still provides the best threshold'
 
 ../scripts/accuracy.py <(cat set-1.class set-2.class) 1e-10
+for i in 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10 1e-11 1e-12; do ../scripts/accuracy.py <(cat set-1.class set-2-corrected.class) $i; done >opt-table-concatenated.txt
+'highest at 1e-08'
+
+#NOTE: PROFESSOR CAPRIOTTI SUGGESTS TO NOT APPLY THE CORRECTION AND TO TRUST PFAM (discuss as a source of error, though)
+
+###PARENTHESIS
+#Trick to find large files
+ls -ltr |sort -gk5|less +G
