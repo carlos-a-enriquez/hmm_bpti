@@ -2,7 +2,7 @@
 shared=/media/sf_shared_linux/lab_bioinformatics/LB1_project;proj=~/projects/hmm_LB1/;db=~/projects/databases
 
 wget https://ftp.rcsb.org/pub/pdb/derived_data/pdb_seqres.txt
-mv three_db_match.txt comm_chains.da
+mv three_db_match.txt comm_chains.dat
 
 
 #fixing comm_chains.dat
@@ -49,6 +49,6 @@ grep -A 1 "^>4bnr" rep-cluster95.fasta |grep -v "^>4bnr" |wc
 
 grep ">" rep-cluster95.fasta |awk '{if(substr($3,8,length($3))+0<100) {print $0}}'|wc  #This is an automated way to check for sequences that are too long (checks the 'length' field in header)
 
-#sequence 4bnr deleted...
+#sequence 4bnr deleted... rep-cluster95_v2.fasta
 
 #Final set: 26 lines, 13 sequences

@@ -74,7 +74,7 @@ pip install openpyxl
 
 #### Now, lets find the match of all 3 databases
 
-cut -b 8-13 pdb-e_fold_3tgi_filtered.txt |sort >pdb-e_final_list.txt #gets the prot-id:chain and sorts (unique: no repetitions, not needed because I include the chains)
+cut -b 8-13 pdb-e_fold_3tgi_filtered.txt |sort >pdb-e_final_list.txt #gets the prot-id:chain and sorts (unique: no repetitions, not needed in my case because I include the chains)
 #by checking
 
 #pdb-e fold vs pdb
