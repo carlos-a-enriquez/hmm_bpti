@@ -4,6 +4,7 @@ shared=/media/sf_shared_linux/lab_bioinformatics/LB1_project;proj=~/projects/hmm
 #Running hmmbuild
 hmmbuild bpti.hmm struct_alignment.seq
 
+#CARRY OUT CONSISTENCY TEST
 
 #Benchmark Downloads
 

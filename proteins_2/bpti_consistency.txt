@@ -1,0 +1,202 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  bpti.hmm
+# target sequence database:        /home/carloskez/projects/hmm_LB1//proteins/rep-cluster95_v2.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       struct_alignment_corrected  [M=58]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.1e-35  109.9   4.7    3.3e-35  109.8   4.7    1.0  1  1t8l_B    mol:protein length:59  Pancreatic trypsin inhibitor
+    4.8e-33  102.9   3.5    5.2e-33  102.8   3.5    1.0  1  1brb_I    mol:protein length:58  PANCREATIC TRYPSIN INHIBITOR
+    5.3e-33  102.7   5.7    5.7e-33  102.6   5.7    1.0  1  1fak_I    mol:protein length:55  PROTEIN (5L15)
+    8.4e-33  102.1   4.8      9e-33  102.0   4.8    1.0  1  3byb_A    mol:protein length:59  Textilinin
+    8.7e-32   98.8   2.2    9.3e-32   98.7   2.2    1.0  1  4u32_X    mol:protein length:55  Kunitz-type protease inhibit
+    1.1e-31   98.6   6.1    1.3e-31   98.3   6.1    1.1  1  6gfi_C    mol:protein length:81  Amyloid-beta A4 protein
+    6.5e-31   96.0   7.0      8e-31   95.8   7.0    1.1  1  5nx1_C    mol:protein length:81  Amyloid-beta A4 protein
+      2e-30   94.5   9.3    2.2e-30   94.4   9.3    1.0  1  4dtg_K    mol:protein length:66  Tissue factor pathway inhibi
+      3e-30   93.9   6.0    3.2e-30   93.8   6.0    1.0  1  4isl_B    mol:protein length:60  Kunitz-type protease inhibit
+    3.5e-30   93.7   7.0    3.8e-30   93.6   6.9    1.0  1  1zr0_B    mol:protein length:63  Tissue factor pathway inhibi
+    8.3e-29   89.3   0.3    9.2e-29   89.2   0.3    1.0  1  3wny_A    mol:protein length:63  Bovine Pancreatic Trypsin In
+    1.6e-28   88.3   8.4    1.8e-28   88.2   8.4    1.0  1  6yhy_A    mol:protein length:59  Conk-S1
+    2.1e-28   88.0   3.8    2.3e-28   87.9   3.8    1.0  1  6q61_A    mol:protein length:61  Kunitz-type conkunitzin-S1
+
+
+Domain annotation for each sequence (and alignments):
+>> 1t8l_B  mol:protein length:59  Pancreatic trypsin inhibitor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  109.8   4.7   3.3e-35   3.3e-35       2      57 ..       2      57 ..       1      58 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 109.8 bits;  conditional E-value: 3.3e-35
+  struct_alignment_corrected  2 rpdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                rpdfCl+p++tGpC+ariiRy+Ynak++ CqtFvYgGc+++rNNFk+aedClrtC+
+                      1t8l_B  2 RPDFCLEPPYTGPCMARIIRYFYNAKAGLCQTFVYGGCRAKRNNFKSAEDCLRTCG 57
+                                8******************************************************6 PP
+
+>> 1brb_I  mol:protein length:58  PANCREATIC TRYPSIN INHIBITOR
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.8   3.5   5.2e-33   5.2e-33       2      56 ..       1      55 [.       1      57 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 102.8 bits;  conditional E-value: 5.2e-33
+  struct_alignment_corrected  2 rpdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtC 56
+                                rpdf+ +p++tGpC+ariiRy+Ynak++ CqtFvYgGc+++rNNFk+aedC+rt+
+                      1brb_I  1 RPDFAGEPPYTGPCKARIIRYFYNAKAGLCQTFVYGGCRAKRNNFKSAEDCMRTA 55
+                                79***************************************************98 PP
+
+>> 1fak_I  mol:protein length:55  PROTEIN (5L15)
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.6   5.7   5.7e-33   5.7e-33       3      56 ..       2      55 .]       1      55 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 102.6 bits;  conditional E-value: 5.7e-33
+  struct_alignment_corrected  3 pdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtC 56
+                                pdfCl+p++ GpCra + Ry+Ynak++ CqtF+YgGc ++rNNF++aedC+rtC
+                      1fak_I  2 PDFCLEPPYDGPCRALHLRYFYNAKAGLCQTFYYGGCLAKRNNFESAEDCMRTC 55
+                                8***************************************************** PP
+
+>> 3byb_A  mol:protein length:59  Textilinin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  102.0   4.8     9e-33     9e-33       1      57 [.       2      58 ..       2      59 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 102.0 bits;  conditional E-value: 9e-33
+  struct_alignment_corrected  1 drpdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                drpdfC+lpadtGpCr r++++yYn++ekkC +F+YgGcegn+NNF t+e+C++tCa
+                      3byb_A  2 DRPDFCELPADTGPCRVRFPSFYYNPDEKKCLEFIYGGCEGNANNFITKEECESTCA 58
+                                69******************************************************6 PP
+
+>> 4u32_X  mol:protein length:55  Kunitz-type protease inhibitor 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.7   2.2   9.3e-32   9.3e-32       3      56 ..       2      55 .]       1      55 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 98.7 bits;  conditional E-value: 9.3e-32
+  struct_alignment_corrected  3 pdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtC 56
+                                +dfCl+++ +G+Cra+++R++Yn+++++Cq FvYgGc+gn+NN+ t+e+Cl++C
+                      4u32_X  2 HDFCLVSKVVGRCRASMPRWWYNVTDGSCQLFVYGGCDGNSNNYLTKEECLKKC 55
+                                79***************************************************9 PP
+
+>> 6gfi_C  mol:protein length:81  Amyloid-beta A4 protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.3   6.1   1.3e-31   1.3e-31       3      57 ..      12      66 ..      10      67 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 98.3 bits;  conditional E-value: 1.3e-31
+  struct_alignment_corrected  3 pdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                 ++C+++a++GpCrar++R+y++++e+kC+ FvYgGc+gnrNNF+t+e+C+++C+
+                      6gfi_C 12 VEVCSEQAEVGPCRARFSRWYFDVTEGKCAPFVYGGCGGNRNNFDTEEYCMAVCG 66
+                                699***************************************************6 PP
+
+>> 5nx1_C  mol:protein length:81  Amyloid-beta A4 protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   95.8   7.0     8e-31     8e-31       4      57 ..      13      66 ..      10      67 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 95.8 bits;  conditional E-value: 8e-31
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++C+++a+tGpCra+i+R+y++++e+kC+ F+YgGc+gnrNNF+t+e+C+++C+
+                      5nx1_C 13 EVCSEQAETGPCRAMISRWYFDVTEGKCAPFFYGGCGGNRNNFDTEEYCMAVCG 66
+                                89***************************************************6 PP
+
+>> 4dtg_K  mol:protein length:66  Tissue factor pathway inhibitor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.4   9.3   2.2e-30   2.2e-30       2      57 ..       3      58 ..       2      59 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 94.4 bits;  conditional E-value: 2.2e-30
+  struct_alignment_corrected  2 rpdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                +pdfC l++d G Cr++i+Ry+Yn+++k+C++F+YgGc gn+NNF+t e+C+++C+
+                      4dtg_K  3 KPDFCFLEEDPGICRGYITRYFYNNQTKQCERFKYGGCLGNMNNFETLEECKNICE 58
+                                89*****************************************************7 PP
+
+>> 4isl_B  mol:protein length:60  Kunitz-type protease inhibitor 1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.8   6.0   3.2e-30   3.2e-30       2      57 ..       2      57 ..       1      58 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 93.8 bits;  conditional E-value: 3.2e-30
+  struct_alignment_corrected  2 rpdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++d+Cl+++++G+Cr++++R+yY+++e+ C++FvYgGc gn+NN+ ++e+C  +C+
+                      4isl_B  2 TEDYCLASNKVGRCRGSFPRWYYDPTEQICKSFVYGGCLGNKNNYLREEECILACR 57
+                                78*****************************************************6 PP
+
+>> 1zr0_B  mol:protein length:63  Tissue factor pathway inhibitor 2
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   93.6   6.9   3.8e-30   3.8e-30       2      57 ..       5      60 ..       4      61 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 93.6 bits;  conditional E-value: 3.8e-30
+  struct_alignment_corrected  2 rpdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++++Cllp d+GpCra + RyyY++++++C++F+YgGcegn+NNF+t+e+C+++C+
+                      1zr0_B  5 NAEICLLPLDYGPCRALLLRYYYDRYTQSCRQFLYGGCEGNANNFYTWEACDDACW 60
+                                689****************************************************8 PP
+
+>> 3wny_A  mol:protein length:63  Bovine Pancreatic Trypsin Inhibitor
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.2   0.3   9.2e-29   9.2e-29       2      57 ..       1      56 [.       1      57 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 89.2 bits;  conditional E-value: 9.2e-29
+  struct_alignment_corrected  2 rpdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                rp+fCl+p+++Gp++ariiRy+Ynak++++q+FvYgG++++rNNF++a+d+l++Ca
+                      3wny_A  1 RPAFCLEPPYAGPGKARIIRYFYNAKAGAAQAFVYGGVRAKRNNFASAADALAACA 56
+                                799****************************************************6 PP
+
+>> 6yhy_A  mol:protein length:59  Conk-S1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   88.2   8.4   1.8e-28   1.8e-28       1      57 [.       1      57 [.       1      58 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 88.2 bits;  conditional E-value: 1.8e-28
+  struct_alignment_corrected  1 drpdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                drp++C+lpad+G+++++++R+yYn+++k+C tF+Y+G++gn+NNF++++dC+rtC+
+                      6yhy_A  1 DRPSYCNLPADSGSGTKSEQRIYYNSARKQCLTFTYNGQGGNENNFRRTYDCRRTCQ 57
+                                69******************************************************8 PP
+
+>> 6q61_A  mol:protein length:61  Kunitz-type conkunitzin-S1
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   87.9   3.8   2.3e-28   2.3e-28       1      57 [.       2      58 ..       2      59 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 87.9 bits;  conditional E-value: 2.3e-28
+  struct_alignment_corrected  1 drpdfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                drp++C+lpad+G+++++++R+yYn+++k+C +F Y+G++gn+NNF++++dC+rtC 
+                      6q61_A  2 DRPSLCDLPADSGSGTKAEKRIYYNSARKQCLRFDYTGQGGNENNFRRTYDCARTCL 58
+                                69******************************************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (58 nodes)
+Target sequences:                         13  (820 residues searched)
+Passed MSV filter:                        13  (1); expected 0.3 (0.02)
+Passed bias filter:                       13  (1); expected 0.3 (0.02)
+Passed Vit filter:                        13  (1); expected 0.0 (0.001)
+Passed Fwd filter:                        13  (1); expected 0.0 (1e-05)
+Initial search space (Z):                 13  [actual number of targets]
+Domain search space  (domZ):              13  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 6.78
+//
+[ok]
