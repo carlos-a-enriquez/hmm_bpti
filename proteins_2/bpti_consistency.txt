@@ -21,7 +21,7 @@ Scores for complete sequences (score includes all domains):
     6.5e-31   96.0   7.0      8e-31   95.8   7.0    1.1  1  5nx1_C    mol:protein length:81  Amyloid-beta A4 protein
       2e-30   94.5   9.3    2.2e-30   94.4   9.3    1.0  1  4dtg_K    mol:protein length:66  Tissue factor pathway inhibi
       3e-30   93.9   6.0    3.2e-30   93.8   6.0    1.0  1  4isl_B    mol:protein length:60  Kunitz-type protease inhibit
-    3.5e-30   93.7   7.0    3.8e-30   93.6   6.9    1.0  1  1zr0_B    mol:protein length:63  Tissue factor pathway inhibi
+    3.5e-30   93.7   7.0    3.8e-30   93.6   7.0    1.0  1  1zr0_B    mol:protein length:63  Tissue factor pathway inhibi
     8.3e-29   89.3   0.3    9.2e-29   89.2   0.3    1.0  1  3wny_A    mol:protein length:63  Bovine Pancreatic Trypsin In
     1.6e-28   88.3   8.4    1.8e-28   88.2   8.4    1.0  1  6yhy_A    mol:protein length:59  Conk-S1
     2.1e-28   88.0   3.8    2.3e-28   87.9   3.8    1.0  1  6q61_A    mol:protein length:61  Kunitz-type conkunitzin-S1
@@ -139,7 +139,7 @@ Domain annotation for each sequence (and alignments):
 >> 1zr0_B  mol:protein length:63  Tissue factor pathway inhibitor 2
    #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
  ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
-   1 !   93.6   6.9   3.8e-30   3.8e-30       2      57 ..       5      60 ..       4      61 .. 0.97
+   1 !   93.6   7.0   3.8e-30   3.8e-30       2      57 ..       5      60 ..       4      61 .. 0.97
 
   Alignments for each domain:
   == domain 1  score: 93.6 bits;  conditional E-value: 3.8e-30
@@ -196,7 +196,7 @@ Passed Vit filter:                        13  (1); expected 0.0 (0.001)
 Passed Fwd filter:                        13  (1); expected 0.0 (1e-05)
 Initial search space (Z):                 13  [actual number of targets]
 Domain search space  (domZ):              13  [number of targets reported over threshold]
-# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
-# Mc/sec: 6.78
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: 15.09
 //
 [ok]
