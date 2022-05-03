@@ -24,7 +24,6 @@ grep ">" uniprot-NOT-pf00014.fasta |cut -d "|" -f 2 >$proj/proteins/list-not-pf0
 
 #shuffling
 sort -R list-clean-pf00014.txt >shuffle-clean-pf00014.txt
-
 head -n 168 shuffle-clean-pf00014.txt >positive-1.txt
 tail -n 168 shuffle-clean-pf00014.txt >positive-2.txt
 
@@ -53,7 +52,6 @@ tail -n 283315 shuffle-not-pf00014.txt >negative-2.txt
 
 hmmsearch --noali --tblout positive-1.match bpti.hmm positive-1.fasta
 hmmsearch --noali --tblout positive-2.match bpti.hmm positive-2.fasta
-
 mmsearch --noali --tblout negative-1.match bpti.hmm negative-1.fasta
 hmmsearch --noali --tblout negative-2.match bpti.hmm negative-2.fasta
 
