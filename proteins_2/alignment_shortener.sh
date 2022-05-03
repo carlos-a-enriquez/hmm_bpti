@@ -110,8 +110,24 @@ sort -gk6 opt-table-2.txt|less
 '
 
 
-#Obtaining final alignment (that considered by the HMM model)
+#Obtaining final alignment (that considered by the HMM model logo, in which only 57 characters are present)
 grep -v -m 1 ">" struct_alignment_corrected.seq |awk '{print length}'
 grep -v ">" struct_alignment_corrected.seq |awk '{print substr($0,1,length($0)-2)}'|awk '{print length}'
-awk '{if (substr($0,0,1)==">") {print $0} else {print substr($0,1,length($0)-2)}}' struct_alignment_corrected.seq >struct_alignment_hmm_corrected.seq
-grep -v ">" struct_alignment_hmm_corrected.seq |awk '{print length}'|less
+awk '{if (substr($0,0,1)==">") {print $0} else {print substr($0,1,length($0)-2)}}' struct_alignment_corrected.seq >struct_alignment_hmm_corrected.seq #eliminates last 2 chars in each sequence
+grep -v ">" struct_alignment_hmm_corrected.seq |awk '{print length}'|less #checking the alignment length is correct
+'57 chars, all good'
+
+#simplifying header
+awk -F ":" '{if (substr($0,0,1)==">") {print ">"$2":"substr($3,1,1)} else {print $0}}' struct_alignment_hmm_corrected.seq >struct_alignment_hmm_corrected_header.seq #leaves only pid and chain in header
+grep -v ">" struct_alignment_hmm_corrected_header.seq |awk '{print length}'|less #checking the alignment length is the same
+'57 chars, all good'
+
+#adding consensus sequence to struct_alignment_hmm_corrected_header.seq
+hmmemit -c bpti.hmm >> struct_alignment_hmm_corrected_header.seq
+tmpfile=$(mktemp)
+awk '{if (substr($0,0,1)==">") {print $0} else {print substr($0,1,57)}}' struct_alignment_hmm_corrected_header.seq > $tmpfile #ensuring that the length is mantained.
+mv $tmpfile struct_alignment_hmm_corrected_header.seq
+
+: 'In addition, the struct_alignment_hmm_corrected_header.seq file
+was manually modified so the header of the consensus sequence is just
+"consensus"'
