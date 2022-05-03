@@ -47,7 +47,7 @@ if __name__ == "__main__":
     cm = get_cm(filename, th)
     acc = get_accuracy(cm)
     #print(cm, np.sum(cm), acc)
-    print('TH:', th, 'Q2:', get_accuracy(cm), 'MCC:', get_mcc(cm), 'TN:', cm[0,0], 'FN:', cm[0,1], 'FP:', cm[1,0], 'TP:', cm[1,1])
+    print('TH:', th, 'Q2:', acc, 'MCC:', get_mcc(cm), 'TN:', cm[0,0], 'FN:', cm[0,1], 'FP:', cm[1,0], 'TP:', cm[1,1])
 
 
 
