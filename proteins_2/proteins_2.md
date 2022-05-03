@@ -6,5 +6,7 @@ probabilities when running hmmsearch on the very training sequences.
 
 Therefore, a script will be created to correct this alignment.
 
+The script is alignment_shortener.sh and it contains all the commands that were repeated.
+
 Then, the entire HMM routine will be repeated on the resulting modified
 alignment. 
