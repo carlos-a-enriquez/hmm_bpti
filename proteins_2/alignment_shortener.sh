@@ -108,3 +108,10 @@ sort -gk6 opt-table-2.txt|less
 
 
 '
+
+
+#Obtaining final alignment (that considered by the HMM model)
+grep -v -m 1 ">" struct_alignment_corrected.seq |awk '{print length}'
+grep -v ">" struct_alignment_corrected.seq |awk '{print substr($0,1,length($0)-2)}'|awk '{print length}'
+awk '{if (substr($0,0,1)==">") {print $0} else {print substr($0,1,length($0)-2)}}' struct_alignment_corrected.seq >struct_alignment_hmm_corrected.seq
+grep -v ">" struct_alignment_hmm_corrected.seq |awk '{print length}'|less
