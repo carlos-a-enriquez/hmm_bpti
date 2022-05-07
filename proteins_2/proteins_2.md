@@ -13,7 +13,7 @@ alignment.
 
 
 ***Note:***
-Note:
+Error 1
 A glaring error has been found when comparing the e-value of set 1 false negatives
 when redoing the hmmsearch.
 
@@ -36,3 +36,6 @@ hmmsearch -Z 1 --domZ 1 --max --noali --tblout negative-1.match bpti.hmm $db/neg
 hmmsearch -Z 1 --domZ 1 --max --noali --tblout negative-2.match bpti.hmm $db/negative-2.fasta
 
 ```
+
+***Note:***
+Error 1 corrected.

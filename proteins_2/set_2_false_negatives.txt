@@ -1,3 +1,3 @@
-#Set 2 cross-validation threshold: 1e-09
+#Set 2 cross-validation threshold: 1e-08
 #listing false negatives:
 O62247 3.5e-06 1

@@ -1,5 +1,3 @@
 #Set 1 cross-validation threshold: 1e-08
 #listing false negatives:
-Q11101 4.1e-08 1
-P86963 8.5e-07 1
-D3GGZ8 0.005 1
+D3GGZ8 3e-05 1

@@ -1,4 +1,4 @@
-#Set 2 cross-validation threshold: 1e-09
+#Set 2 cross-validation threshold: 1e-08
 #listing false positives:
 P0DV03 5.6e-28 0
 P0DV06 3.4e-27 0

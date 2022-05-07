@@ -4,7 +4,7 @@
 # Freely distributed under the BSD open source license.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # query HMM file:                  bpti.hmm
-# target sequence database:        /tmp/tmp.tQyLjq4RwW
+# target sequence database:        /tmp/tmp.KYfOuSR0Sz
 # Max sensitivity mode:            on [all heuristic filters off]
 # sequence search space set to:    1
 # domain search space set to:      1
@@ -51,6 +51,6 @@ Passed Fwd filter:                         1  (1); expected 1.0 (1)
 Initial search space (Z):                  1  [as set by --Z on cmdline]
 Domain search space  (domZ):               1  [as set by --domZ on cmdline]
 # CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
-# Mc/sec: 15.17
+# Mc/sec: 11.94
 //
 [ok]

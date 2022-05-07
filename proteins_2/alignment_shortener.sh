@@ -161,11 +161,11 @@ echo '#Set 2 cross-validation threshold: 1e-08' >set_2_false_negatives.txt
 echo '#listing false negatives:' >>set_2_false_negatives.txt
 
 #Finding false positives
-awk '{if($NF==0 && $2<1e-08) {print $0}}' <(sort -gk2 set-2.class) |less
+#awk '{if($NF==0 && $2<1e-08) {print $0}}' <(sort -gk2 set-2.class) |less
 awk '{if($NF==0 && $2<1e-08) {print $0}}' <(sort -gk2 set-2.class) >>set_2_false_positives.txt
 
 #finding false negatives
-awk '{if($NF==1 && $2>=1e-08) {print $0}}' <(sort -gk2 set-2.class) |less
+#awk '{if($NF==1 && $2>=1e-08) {print $0}}' <(sort -gk2 set-2.class) |less
 awk '{if($NF==1 && $2>=1e-08) {print $0}}' <(sort -gk2 set-2.class) >>set_2_false_negatives.txt
 
 ###########
