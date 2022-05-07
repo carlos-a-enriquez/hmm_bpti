@@ -6,7 +6,7 @@ pfam=$3
 echo "Setting directories" >/dev/stderr
 shared=/media/sf_shared_linux/lab_bioinformatics/LB1_project;proj=~/projects/hmm_LB1/
 
-grep -E "^ *[0-9]" $1| awk '{if ($4>=3 && $5<=1) print $(NF-2), $NF}' $proj/proteins/pdb-e_fold_3tgi.txt >$proj/proteins/pdb-e_fold_3tgi_filtered.txt
+grep -E "^ *[0-9]" $1| awk '{if ($4>=3 && $5<=1) print $(NF-2), $NF}' >$proj/proteins/pdb-e_fold_3tgi_filtered.txt
 lines=$(wc $proj/proteins/pdb-e_fold_3tgi_filtered.txt)
 echo $lines "chains obtained from pdb-e fold"
 

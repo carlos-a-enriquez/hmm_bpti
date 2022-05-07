@@ -28,7 +28,7 @@ PDBe Fold v2.59. (src3) 14 Apr 2014 result file.
 grep -E "^ *[0-9]" pdb-e_fold_3tgi.txt |less -S #this gets the useful lines
 
 #A possible command that could be used to obtain the protein ids that match a certain z score and rmsd
-grep -E "^ *[0-9]" $proj/proteins/pdb-e_fold_3tgi.txt| awk '{if ($4>=3 && $5<=1) print $(NF-2), $NF}' $proj/proteins/pdb-e_fold_3tgi.txt >$proj/proteins/pdb-e_fold_3tgi_filtered.txt
+grep -E "^ *[0-9]" $proj/proteins/pdb-e_fold_3tgi.txt| awk '{if ($4>=3 && $5<=1) print $(NF-2), $NF}' >$proj/proteins/pdb-e_fold_3tgi_filtered.txt
 
 #filters
 #z-score >=3
