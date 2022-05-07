@@ -1,0 +1,62 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  bpti.hmm
+# target sequence database:        /tmp/tmp.vaQxYJXi48
+# Max sensitivity mode:            on [all heuristic filters off]
+# sequence search space set to:    1
+# domain search space set to:      1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       struct_alignment_corrected  [M=58]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.3e-28   83.2   4.0    5.6e-28   83.1   4.0    1.0  1  P0DV03    
+    3.3e-27   80.6   4.6    3.4e-27   80.5   4.6    1.0  1  P0DV06    
+
+
+Domain annotation for each sequence (and alignments):
+>> P0DV03  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   83.1   4.0   5.6e-28   5.6e-28       4      57 ..       2      55 ..       1      56 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 83.1 bits;  conditional E-value: 5.6e-28
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++Cl+p+ +GpC+a++ R+y++++++kC  F+YgGcegn NNF+t  +C+++C+
+                      P0DV03  2 SICLEPKVVGPCTAYLRRFYFDSETGKCTPFIYGGCEGNGNNFETLRACRAICR 55
+                                69***************************************************6 PP
+
+>> P0DV06  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.5   4.6   3.4e-27   3.4e-27       4      57 ..       2      55 ..       1      56 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 80.5 bits;  conditional E-value: 3.4e-27
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++Cl+p+ +GpC+a++ R+yY+++++kC  F+ gGcegn NNF+t  +C+++C+
+                      P0DV06  2 SICLEPKVVGPCTAYFRRFYYDSETGKCTPFIHGGCEGNGNNFETLRACRAICR 55
+                                69***************************************************6 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (58 nodes)
+Target sequences:                          2  (112 residues searched)
+Passed MSV filter:                         2  (1); expected 2.0 (1)
+Passed bias filter:                        2  (1); expected 2.0 (1)
+Passed Vit filter:                         2  (1); expected 2.0 (1)
+Passed Fwd filter:                         2  (1); expected 2.0 (1)
+Initial search space (Z):                  1  [as set by --Z on cmdline]
+Domain search space  (domZ):               1  [as set by --domZ on cmdline]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 6.83
+//
+[ok]

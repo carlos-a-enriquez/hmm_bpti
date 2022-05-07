@@ -1,0 +1,75 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  bpti.hmm
+# target sequence database:        /tmp/tmp.mT2Dg6wTPt
+# Max sensitivity mode:            on [all heuristic filters off]
+# sequence search space set to:    1
+# domain search space set to:      1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       struct_alignment_corrected  [M=58]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.3e-29   86.6   3.2    4.6e-29   86.6   3.2    1.0  1  P0DV05    
+    1.7e-28   84.7   5.0    1.8e-28   84.6   5.0    1.0  1  P0DV04    
+    1.4e-09   24.1   0.0    1.4e-09   24.1   0.0    1.0  1  P84555    
+
+
+Domain annotation for each sequence (and alignments):
+>> P0DV05  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.6   3.2   4.6e-29   4.6e-29       4      57 ..       2      55 ..       1      56 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 86.6 bits;  conditional E-value: 4.6e-29
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++Cl+p+ +GpC+ari R+y++++++kC  F+YgGc+gn NNF+t  +C+++C+
+                      P0DV05  2 SICLEPKVVGPCKARIRRFYFDSETGKCTPFIYGGCGGNGNNFETLHACRAICR 55
+                                69***************************************************6 PP
+
+>> P0DV04  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.6   5.0   1.8e-28   1.8e-28       4      57 ..       2      55 ..       1      56 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 84.6 bits;  conditional E-value: 1.8e-28
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++Cl+p+++G+Cr++++R+y++++++kC  F+YgGc+gn NNF+t  +C+++C+
+                      P0DV04  2 SICLEPKKVGRCRGSFPRFYFDSETGKCTPFIYGGCGGNGNNFETLHACRAICR 55
+                                69***************************************************6 PP
+
+>> P84555  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.1   0.0   1.4e-09   1.4e-09       4      26 ..       5      27 ..       2      29 .] 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 24.1 bits;  conditional E-value: 1.4e-09
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYna 26
+                                + C   ad GpC+a+i+ ++Yn+
+                      P84555  5 SQCVPTADPGPCKAYIPMWWYNV 27
+                                569999****************7 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (58 nodes)
+Target sequences:                          3  (141 residues searched)
+Passed MSV filter:                         3  (1); expected 3.0 (1)
+Passed bias filter:                        3  (1); expected 3.0 (1)
+Passed Vit filter:                         3  (1); expected 3.0 (1)
+Passed Fwd filter:                         3  (1); expected 3.0 (1)
+Initial search space (Z):                  1  [as set by --Z on cmdline]
+Domain search space  (domZ):               1  [as set by --domZ on cmdline]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 13.05
+//
+[ok]

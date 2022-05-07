@@ -1,0 +1,89 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  bpti.hmm
+# target sequence database:        /tmp/tmp.Iw7QzNINBQ
+# Max sensitivity mode:            on [all heuristic filters off]
+# sequence search space set to:    1
+# domain search space set to:      1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       struct_alignment_corrected  [M=58]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    9.1e-11   28.0   6.6    2.4e-10   26.6   6.6    1.8  1  Q11101    
+    2.1e-09   23.6  10.8    5.1e-09   22.4   7.5    3.1  2  P86963    
+    4.2e-05    9.8   3.5      3e-05   10.3   0.2    2.3  2  D3GGZ8    
+
+
+Domain annotation for each sequence (and alignments):
+>> Q11101  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.6   6.6   2.4e-10   2.4e-10      17      57 ..      35      75 ..      18      76 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 26.6 bits;  conditional E-value: 2.4e-10
+  struct_alignment_corrected 17 ariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                +  +++yY++k   C  ++Y Gc+  +N F+++e+Cl+ C+
+                      Q11101 35 KTSTKWYYDSKLLFCYPYKYLGCGEGSNSFESNENCLESCK 75
+                                56789***********************************6 PP
+
+>> P86963  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.2   0.0     0.042     0.042      18      31 ..      60      73 ..      53      75 .. 0.81
+   2 !   22.4   7.5   5.1e-09   5.1e-09      15      57 ..     112     152 ..      93     153 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 0.2 bits;  conditional E-value: 0.042
+  struct_alignment_corrected 18 riiRyyYnakekkC 31
+                                 ++R++Y +    C
+                      P86963 60 LVPRFFYSNRLNRC 73
+                                579****9988877 PP
+
+  == domain 2  score: 22.4 bits;  conditional E-value: 5.1e-09
+  struct_alignment_corrected  15 CrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57 
+                                 C   + R+ +    + C + ++ Gc+gn NNFkt+ +C++ C+
+                      P86963 112 CEREVMRWMFV--GEMCVQRMFSGCGGNGNNFKTQGECMKFCK 152
+                                 67777788774..4689999**********************6 PP
+
+>> D3GGZ8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.7   0.3      0.08      0.08      39      53 ..     107     121 ..     107     123 .. 0.88
+   2 !   10.3   0.2     3e-05     3e-05      41      56 ..     175     190 ..     152     192 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -0.7 bits;  conditional E-value: 0.08
+  struct_alignment_corrected  39 cegnrNNFktaedCl 53 
+                                 c  + N  +t ++C 
+                      D3GGZ8 107 CSSKTNDCETGYECI 121
+                                 889999999999997 PP
+
+  == domain 2  score: 10.3 bits;  conditional E-value: 3e-05
+  struct_alignment_corrected  41 gnrNNFktaedClrtC 56 
+                                   +NNFkt+ +C++ C
+                      D3GGZ8 175 SSANNFKTKLQCESYC 190
+                                 468************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (58 nodes)
+Target sequences:                          3  (708 residues searched)
+Passed MSV filter:                         3  (1); expected 3.0 (1)
+Passed bias filter:                        3  (1); expected 3.0 (1)
+Passed Vit filter:                         3  (1); expected 3.0 (1)
+Passed Fwd filter:                         3  (1); expected 3.0 (1)
+Initial search space (Z):                  1  [as set by --Z on cmdline]
+Domain search space  (domZ):               1  [as set by --domZ on cmdline]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 14.96
+//
+[ok]

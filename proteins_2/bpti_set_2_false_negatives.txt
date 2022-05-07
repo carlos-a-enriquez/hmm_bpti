@@ -1,0 +1,56 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  bpti.hmm
+# target sequence database:        /tmp/tmp.tQyLjq4RwW
+# Max sensitivity mode:            on [all heuristic filters off]
+# sequence search space set to:    1
+# domain search space set to:      1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       struct_alignment_corrected  [M=58]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.5e-06   13.3   0.2    3.5e-06   13.3   0.2    1.9  2  O62247    
+
+
+Domain annotation for each sequence (and alignments):
+>> O62247  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.5   0.2       0.6       0.6      13      18 ..      41      46 ..      39      49 .. 0.71
+   2 !   13.3   0.2   3.5e-06   3.5e-06      17      56 ..     146     184 ..     130     186 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -3.5 bits;  conditional E-value: 0.6
+  struct_alignment_corrected 13 GpCrar 18
+                                G+Cr +
+                      O62247 41 GRCRCS 46
+                                888866 PP
+
+  == domain 2  score: 13.3 bits;  conditional E-value: 3.5e-06
+  struct_alignment_corrected  17 ariiRyyYnakekkCqtFvYgGce.gnrNNFktaedClrtC 56 
+                                 ++++R+ ++   ++C +F+++  +   +NNFkt + C++ C
+                      O62247 146 GYLSRWGFDG--EQCIEFKWNPERpSSANNFKTRAHCEDYC 184
+                                 5667777765..5899999998773679************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (58 nodes)
+Target sequences:                          1  (202 residues searched)
+Passed MSV filter:                         1  (1); expected 1.0 (1)
+Passed bias filter:                        1  (1); expected 1.0 (1)
+Passed Vit filter:                         1  (1); expected 1.0 (1)
+Passed Fwd filter:                         1  (1); expected 1.0 (1)
+Initial search space (Z):                  1  [as set by --Z on cmdline]
+Domain search space  (domZ):               1  [as set by --domZ on cmdline]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 15.17
+//
+[ok]

@@ -47,7 +47,7 @@ comm -13 <(sort <(grep -v "#" positive-1.match |awk '{print $1}')) <(sort $proj/
 
 
 #Redoing the hmmsearch with Automatic normalization
-hmmsearch -Z 1 -domZ 1 --max --noali --tblout positive-1.match bpti.hmm $db/positive-1.fasta
+hmmsearch -Z 1 --domZ 1 --max --noali --tblout positive-1.match bpti.hmm $db/positive-1.fasta
 hmmsearch -Z 1 --domZ 1 --max --noali --tblout positive-2.match bpti.hmm $db/positive-2.fasta
 hmmsearch -Z 1 --domZ 1 --max --noali --tblout negative-1.match bpti.hmm $db/negative-1.fasta
 hmmsearch -Z 1 --domZ 1 --max --noali --tblout negative-2.match bpti.hmm $db/negative-2.fasta
@@ -137,6 +137,7 @@ was manually modified so the header of the consensus sequence is just
 
 ### New procedure: aligning false positive and false negative sequences to model
 
+#########
 #Set 1 cross-validation threshold: 1e-08
 echo '#Set 1 cross-validation threshold: 1e-08' >set_1_false_positives.txt
 echo '#listing false positives:' >>set_1_false_positives.txt
@@ -144,9 +145,71 @@ echo '#Set 1 cross-validation threshold: 1e-08' >set_1_false_negatives.txt
 echo '#listing false negatives:' >>set_1_false_negatives.txt
 
 #Finding false positives
-awk '{if($NF==0 && $2<1e-08) {print $0}}' <(sort -gk2 set-1.class) |less
+#awk '{if($NF==0 && $2<1e-08) {print $0}}' <(sort -gk2 set-1.class) |less
 awk '{if($NF==0 && $2<1e-08) {print $0}}' <(sort -gk2 set-1.class) >>set_1_false_positives.txt
 
 #finding false negatives
-awk '{if($NF==1 && $2>1e-08) {print $0}}' <(sort -gk2 set-1.class) |less
-awk '{if($NF==1 && $2>1e-08) {print $0}}' <(sort -gk2 set-1.class) >>set_1_false_negatives.txt
+#awk '{if($NF==1 && $2>=1e-08) {print $0}}' <(sort -gk2 set-1.class) |less
+awk '{if($NF==1 && $2>=1e-08) {print $0}}' <(sort -gk2 set-1.class) >>set_1_false_negatives.txt
+
+
+##########
+#Set 2 cross-validation threshold: 1e-09
+echo '#Set 2 cross-validation threshold: 1e-09' >set_2_false_positives.txt
+echo '#listing false positives:' >>set_2_false_positives.txt
+echo '#Set 2 cross-validation threshold: 1e-09' >set_2_false_negatives.txt
+echo '#listing false negatives:' >>set_2_false_negatives.txt
+
+#Finding false positives
+awk '{if($NF==0 && $2<1e-09) {print $0}}' <(sort -gk2 set-2.class) |less
+awk '{if($NF==0 && $2<1e-09) {print $0}}' <(sort -gk2 set-2.class) >>set_2_false_positives.txt
+
+#finding false negatives
+awk '{if($NF==1 && $2>=1e-09) {print $0}}' <(sort -gk2 set-2.class) |less
+awk '{if($NF==1 && $2>=1e-09) {print $0}}' <(sort -gk2 set-2.class) >>set_2_false_negatives.txt
+
+###########
+#Obtaining the ids to query
+grep -v "#" set_1_false_negatives.txt |cut -d " " -f1|less
+
+#Set 1 false positives
+tmpfile=$(mktemp)
+#../scripts/cross-validation.py <(grep -v "#" set_1_false_positives.txt |cut -d " " -f1) $db/uniprot-NOT-pf00014.fasta |less
+../scripts/cross-validation.py <(grep -v "#" set_1_false_positives.txt |cut -d " " -f1) $db/uniprot-NOT-pf00014.fasta >$tmpfile
+hmmsearch -Z 1 --domZ 1 --max bpti.hmm $tmpfile >bpti_set_1_false_positives.txt
+rm -v $tmpfile
+
+#Set 1 false negatives
+tmpfile=$(mktemp)
+../scripts/cross-validation.py <(grep -v "#" set_1_false_negatives.txt |cut -d " " -f1) $db/uniprot-clean-pf00014 >$tmpfile
+hmmsearch -Z 1 --domZ 1 --max bpti.hmm $tmpfile >bpti_set_1_false_negatives.txt
+rm -v $tmpfile
+
+#Set 2 false positives
+tmpfile=$(mktemp)
+../scripts/cross-validation.py <(grep -v "#" set_2_false_positives.txt |cut -d " " -f1) $db/uniprot-NOT-pf00014.fasta >$tmpfile
+hmmsearch -Z 1 --domZ 1 --max bpti.hmm $tmpfile >bpti_set_2_false_positives.txt
+rm -v $tmpfile
+
+
+#Set2 false negatives
+tmpfile=$(mktemp)
+../scripts/cross-validation.py <(grep -v "#" set_2_false_negatives.txt |cut -d " " -f1) $db/uniprot-clean-pf00014 >$tmpfile
+hmmsearch -Z 1 --domZ 1 --max bpti.hmm $tmpfile >bpti_set_2_false_negatives.txt
+rm -v $tmpfile
+
+
+: 'Note:
+A glaring error has been found when comparing the e-value of set 1 false negatives
+when redoing the hmmsearch.
+
+It appears that positive-1.match was done incorrectly because it has the
+following metadata:
+
+"# Option settings: hmmsearch --tblout positive-1.tmp --noali --max bpti.hmm /home/carloskez/projects/databases/positive-1.fasta"
+
+This tells me that the "-Z 1 --domZ 1 --max" options were not included and, as
+such, e-values are not normalized. 
+
+
+'
