@@ -213,3 +213,17 @@ such, e-values are not normalized.
 
 
 '
+
+
+### Repeating accuracy analysis to obtain extended statistics
+
+for i in 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10 1e-11 1e-12; do ../scripts/accuracy.py set-1.class $i; done >ext_opt-table-1.txt
+for i in 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10 1e-11 1e-12; do ../scripts/accuracy.py set-2.class $i; done >ext_opt-table-2.txt
+
+#concatenated sets
+for i in 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10 1e-11 1e-12; do ../scripts/accuracy.py <(cat set-1.class set-2.class) $i; done >ext_opt-table-concatenated.txt
+
+#finding the best thresholds
+sort -gk6 ext_opt-table-1.txt|less
+sort -gk6 ext_opt-table-2.txt|less
+sort -gk6 ext_opt-table-concatenated.txt|less

@@ -38,6 +38,15 @@ def get_mcc(cm):
     return n/d
 
 
+def extended_parameters(cm):
+    tp, tn, fp, fn = cm[1,1], cm[0,0], cm[1,0], cm[0,1]
+    sens = tp/(tp+fn)
+    spec = tn/(tn+fp)
+    fpr = fp/(tn+fp)
+    prec = tp/(tp+fp)
+    return sens, spec, fpr, prec
+
+
 
 
 
@@ -47,7 +56,10 @@ if __name__ == "__main__":
     cm = get_cm(filename, th)
     acc = get_accuracy(cm)
     #print(cm, np.sum(cm), acc)
-    print('TH:', th, 'Q2:', acc, 'MCC:', get_mcc(cm), 'TN:', cm[0,0], 'FN:', cm[0,1], 'FP:', cm[1,0], 'TP:', cm[1,1])
+    #print('TH:', th, 'Q2:', acc, 'MCC:', get_mcc(cm), 'TN:', cm[0,0], 'FN:', cm[0,1], 'FP:', cm[1,0], 'TP:', cm[1,1])
+
+    sens, spec, fpr, prec = extended_parameters(cm)
+    print('TH:', th, 'Q2:', acc, 'MCC:', get_mcc(cm), 'TN:', cm[0,0], 'FN:', cm[0,1], 'FP:', cm[1,0], 'TP:', cm[1,1], 'TPR:', sens, 'TNR:', spec, 'FPR:', fpr, 'PPV:', prec)
 
 
 
