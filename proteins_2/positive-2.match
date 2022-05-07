@@ -177,5 +177,5 @@ O62247               -          struct_alignment_corrected -            3.5e-06 
 # Target file:     /home/carloskez/projects/databases/positive-2.fasta
 # Option settings: hmmsearch --tblout positive-2.match --noali --max -Z 1 --domZ 1 bpti.hmm /home/carloskez/projects/databases/positive-2.fasta 
 # Current dir:     /home/carloskez/projects/hmm_LB1/proteins_2
-# Date:            Tue May  3 16:26:54 2022
+# Date:            Sat May  7 16:31:12 2022
 # [ok]

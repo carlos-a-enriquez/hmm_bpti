@@ -96,12 +96,12 @@ for i in 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10 1e-11 1e-12; do ../scripts/acc
 #finding the best thresholds
 sort -gk6 opt-table-1.txt|less
 sort -gk6 opt-table-2.txt|less
-sort -gk6 opt-table-2.txt|less
+sort -gk6 opt-table-concatenated.txt|less
 
 
 : ' The best thresholds are as follows:
 
-1e-09 for set 1
+1e-08 for set 1
 1e-08 for set 2
 
 1e-09 for concatenated
@@ -154,19 +154,19 @@ awk '{if($NF==1 && $2>=1e-08) {print $0}}' <(sort -gk2 set-1.class) >>set_1_fals
 
 
 ##########
-#Set 2 cross-validation threshold: 1e-09
-echo '#Set 2 cross-validation threshold: 1e-09' >set_2_false_positives.txt
+#Set 2 cross-validation threshold: 1e-08
+echo '#Set 2 cross-validation threshold: 1e-08' >set_2_false_positives.txt
 echo '#listing false positives:' >>set_2_false_positives.txt
-echo '#Set 2 cross-validation threshold: 1e-09' >set_2_false_negatives.txt
+echo '#Set 2 cross-validation threshold: 1e-08' >set_2_false_negatives.txt
 echo '#listing false negatives:' >>set_2_false_negatives.txt
 
 #Finding false positives
-awk '{if($NF==0 && $2<1e-09) {print $0}}' <(sort -gk2 set-2.class) |less
-awk '{if($NF==0 && $2<1e-09) {print $0}}' <(sort -gk2 set-2.class) >>set_2_false_positives.txt
+awk '{if($NF==0 && $2<1e-08) {print $0}}' <(sort -gk2 set-2.class) |less
+awk '{if($NF==0 && $2<1e-08) {print $0}}' <(sort -gk2 set-2.class) >>set_2_false_positives.txt
 
 #finding false negatives
-awk '{if($NF==1 && $2>=1e-09) {print $0}}' <(sort -gk2 set-2.class) |less
-awk '{if($NF==1 && $2>=1e-09) {print $0}}' <(sort -gk2 set-2.class) >>set_2_false_negatives.txt
+awk '{if($NF==1 && $2>=1e-08) {print $0}}' <(sort -gk2 set-2.class) |less
+awk '{if($NF==1 && $2>=1e-08) {print $0}}' <(sort -gk2 set-2.class) >>set_2_false_negatives.txt
 
 ###########
 #Obtaining the ids to query
@@ -209,7 +209,7 @@ following metadata:
 "# Option settings: hmmsearch --tblout positive-1.tmp --noali --max bpti.hmm /home/carloskez/projects/databases/positive-1.fasta"
 
 This tells me that the "-Z 1 --domZ 1 --max" options were not included and, as
-such, e-values are not normalized. 
+such, e-values are not normalized.
 
 
 '
