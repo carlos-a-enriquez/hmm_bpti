@@ -131,3 +131,22 @@ mv $tmpfile struct_alignment_hmm_corrected_header.seq
 : 'In addition, the struct_alignment_hmm_corrected_header.seq file
 was manually modified so the header of the consensus sequence is just
 "consensus"'
+
+
+
+
+### New procedure: aligning false positive and false negative sequences to model
+
+#Set 1 cross-validation threshold: 1e-08
+echo '#Set 1 cross-validation threshold: 1e-08' >set_1_false_positives.txt
+echo '#listing false positives:' >>set_1_false_positives.txt
+echo '#Set 1 cross-validation threshold: 1e-08' >set_1_false_negatives.txt
+echo '#listing false negatives:' >>set_1_false_negatives.txt
+
+#Finding false positives
+awk '{if($NF==0 && $2<1e-08) {print $0}}' <(sort -gk2 set-1.class) |less
+awk '{if($NF==0 && $2<1e-08) {print $0}}' <(sort -gk2 set-1.class) >>set_1_false_positives.txt
+
+#finding false negatives
+awk '{if($NF==1 && $2>1e-08) {print $0}}' <(sort -gk2 set-1.class) |less
+awk '{if($NF==1 && $2>1e-08) {print $0}}' <(sort -gk2 set-1.class) >>set_1_false_negatives.txt
