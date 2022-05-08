@@ -117,6 +117,14 @@ sort -gk6 opt-table-concatenated.txt|less
 
 '
 
+### Alignment corrections
+
+: '
+# Alignment corrections
+This the previous version
+Ergo, when I thought that the hmm model had a length of 57. It turns
+out that the length is 58, but I still should leave the alignment alone.
+'
 
 #Obtaining final alignment (that considered by the HMM model logo, in which only 57 characters are present)
 grep -v -m 1 ">" struct_alignment_corrected.seq |awk '{print length}'
@@ -139,6 +147,27 @@ mv $tmpfile struct_alignment_hmm_corrected_header.seq
 : 'In addition, the struct_alignment_hmm_corrected_header.seq file
 was manually modified so the header of the consensus sequence is just
 "consensus"'
+
+
+: '
+# Alignment corrections
+Version updated during 08/05/22
+Now, I will leave the alignment in its original length, but I still
+add the consensus at the end. This alignment will be used for the report.
+'
+
+#checking alignment length
+grep -v -m 1 ">" struct_alignment_corrected.seq |awk '{print length}'
+'Length 59 as expected'
+
+#simplifying header
+awk -F ":" '{if (substr($0,0,1)==">") {print ">"$2":"substr($3,1,1)} else {print $0}}' struct_alignment_corrected.seq >struct_alignment_corrected_header.seq
+
+#adding consensus sequence
+hmmemit -c bpti.hmm >> struct_alignment_corrected_header.seq
+
+: 'The header of the consensus was also modified this time.'
+
 
 
 
