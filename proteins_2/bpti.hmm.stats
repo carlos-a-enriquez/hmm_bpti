@@ -1,0 +1,14 @@
+# hmmbuild :: profile HMM construction from multiple sequence alignments
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# input alignment file:             struct_alignment_corrected.seq
+# output HMM file:                  bpti.hmm.test
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# idx name                         nseq  alen  mlen eff_nseq re/pos description
+#---- -------------------- ----- ----- ----- -------- ------ -----------
+1     struct_alignment_corrected    14    59    58     1.87  0.962
+
+# CPU time: 0.13u 0.00s 00:00:00.13 Elapsed: 00:00:00.13
