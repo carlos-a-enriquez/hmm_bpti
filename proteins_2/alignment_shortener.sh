@@ -29,6 +29,14 @@ The shortening will now eliminate the first 3 characters instead of the first 2.
 2 sequences without gaps is not enough for the model
 '
 
+#Running hmmbuild
+hmmbuild bpti.hmm struct_alignment_corrected.seq
+
+#checking the consistency of the bult model with the training alignment
+hmmsearch --noali bpti.hmm rep-cluster95_v2.fasta >bpti_consistency.txt
+less bpti_consistency.txt
+
+
 #oops, the corresponding fasta files are already in $db
 cp $proj/proteins/*ve-1.txt ../proteins_2/
 cp $proj/proteins/*ve-2.txt ../proteins_2/
