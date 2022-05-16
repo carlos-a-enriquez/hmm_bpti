@@ -20,9 +20,9 @@ To rerun the analysis, do the following:
 
  3. Follow hmm_bpti/scripts/redundancy.sh
 
- 4. Follow mm_bpti/scripts/alignment.sh
+ 4. Follow hmm_bpti/scripts/alignment.sh
 
- 5. Follow mm_bpti/proteins_2/alignment_shortener.sh
+ 5. Follow hmm_bpti/proteins_2/alignment_shortener.sh
 
  Note: The corresponding Uniprot databases are managed outside the Github
  repository due to their size.
