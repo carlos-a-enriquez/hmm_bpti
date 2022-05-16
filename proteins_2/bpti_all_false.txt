@@ -1,0 +1,141 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  bpti.hmm
+# target sequence database:        /dev/fd/63
+# Max sensitivity mode:            on [all heuristic filters off]
+# sequence search space set to:    1
+# domain search space set to:      1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       struct_alignment_corrected  [M=58]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.3e-29   86.6   3.2    4.6e-29   86.6   3.2    1.0  1  P0DV05    
+    1.7e-28   84.7   5.0    1.8e-28   84.6   5.0    1.0  1  P0DV04    
+    5.3e-28   83.2   4.0    5.6e-28   83.1   4.0    1.0  1  P0DV03    
+    3.3e-27   80.6   4.6    3.4e-27   80.5   4.6    1.0  1  P0DV06    
+    1.4e-09   24.1   0.0    1.4e-09   24.1   0.0    1.0  1  P84555    
+    3.5e-06   13.3   0.2    3.5e-06   13.3   0.2    1.9  2  O62247    
+    4.2e-05    9.8   3.5      3e-05   10.3   0.2    2.3  2  D3GGZ8    
+
+
+Domain annotation for each sequence (and alignments):
+>> P0DV05  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.6   3.2   4.6e-29   4.6e-29       4      57 ..       2      55 ..       1      56 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 86.6 bits;  conditional E-value: 4.6e-29
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++Cl+p+ +GpC+ari R+y++++++kC  F+YgGc+gn NNF+t  +C+++C+
+                      P0DV05  2 SICLEPKVVGPCKARIRRFYFDSETGKCTPFIYGGCGGNGNNFETLHACRAICR 55
+                                69***************************************************6 PP
+
+>> P0DV04  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   84.6   5.0   1.8e-28   1.8e-28       4      57 ..       2      55 ..       1      56 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 84.6 bits;  conditional E-value: 1.8e-28
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++Cl+p+++G+Cr++++R+y++++++kC  F+YgGc+gn NNF+t  +C+++C+
+                      P0DV04  2 SICLEPKKVGRCRGSFPRFYFDSETGKCTPFIYGGCGGNGNNFETLHACRAICR 55
+                                69***************************************************6 PP
+
+>> P0DV03  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   83.1   4.0   5.6e-28   5.6e-28       4      57 ..       2      55 ..       1      56 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 83.1 bits;  conditional E-value: 5.6e-28
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++Cl+p+ +GpC+a++ R+y++++++kC  F+YgGcegn NNF+t  +C+++C+
+                      P0DV03  2 SICLEPKVVGPCTAYLRRFYFDSETGKCTPFIYGGCEGNGNNFETLRACRAICR 55
+                                69***************************************************6 PP
+
+>> P0DV06  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.5   4.6   3.4e-27   3.4e-27       4      57 ..       2      55 ..       1      56 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 80.5 bits;  conditional E-value: 3.4e-27
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYnakekkCqtFvYgGcegnrNNFktaedClrtCa 57
+                                ++Cl+p+ +GpC+a++ R+yY+++++kC  F+ gGcegn NNF+t  +C+++C+
+                      P0DV06  2 SICLEPKVVGPCTAYFRRFYYDSETGKCTPFIHGGCEGNGNNFETLRACRAICR 55
+                                69***************************************************6 PP
+
+>> P84555  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.1   0.0   1.4e-09   1.4e-09       4      26 ..       5      27 ..       2      29 .] 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 24.1 bits;  conditional E-value: 1.4e-09
+  struct_alignment_corrected  4 dfCllpadtGpCrariiRyyYna 26
+                                + C   ad GpC+a+i+ ++Yn+
+                      P84555  5 SQCVPTADPGPCKAYIPMWWYNV 27
+                                569999****************7 PP
+
+>> O62247  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.5   0.2       0.6       0.6      13      18 ..      41      46 ..      39      49 .. 0.71
+   2 !   13.3   0.2   3.5e-06   3.5e-06      17      56 ..     146     184 ..     130     186 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -3.5 bits;  conditional E-value: 0.6
+  struct_alignment_corrected 13 GpCrar 18
+                                G+Cr +
+                      O62247 41 GRCRCS 46
+                                888866 PP
+
+  == domain 2  score: 13.3 bits;  conditional E-value: 3.5e-06
+  struct_alignment_corrected  17 ariiRyyYnakekkCqtFvYgGce.gnrNNFktaedClrtC 56 
+                                 ++++R+ ++   ++C +F+++  +   +NNFkt + C++ C
+                      O62247 146 GYLSRWGFDG--EQCIEFKWNPERpSSANNFKTRAHCEDYC 184
+                                 5667777765..5899999998773679************9 PP
+
+>> D3GGZ8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.7   0.3      0.08      0.08      39      53 ..     107     121 ..     107     123 .. 0.88
+   2 !   10.3   0.2     3e-05     3e-05      41      56 ..     175     190 ..     152     192 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -0.7 bits;  conditional E-value: 0.08
+  struct_alignment_corrected  39 cegnrNNFktaedCl 53 
+                                 c  + N  +t ++C 
+                      D3GGZ8 107 CSSKTNDCETGYECI 121
+                                 889999999999997 PP
+
+  == domain 2  score: 10.3 bits;  conditional E-value: 3e-05
+  struct_alignment_corrected  41 gnrNNFktaedClrtC 56 
+                                   +NNFkt+ +C++ C
+                      D3GGZ8 175 SSANNFKTKLQCESYC 190
+                                 468************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (58 nodes)
+Target sequences:                          7  (650 residues searched)
+Passed MSV filter:                         7  (1); expected 7.0 (1)
+Passed bias filter:                        7  (1); expected 7.0 (1)
+Passed Vit filter:                         7  (1); expected 7.0 (1)
+Passed Fwd filter:                         7  (1); expected 7.0 (1)
+Initial search space (Z):                  1  [as set by --Z on cmdline]
+Domain search space  (domZ):               1  [as set by --domZ on cmdline]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: 25.31
+//
+[ok]

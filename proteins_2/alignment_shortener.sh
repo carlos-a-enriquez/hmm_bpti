@@ -236,6 +236,13 @@ hmmsearch -Z 1 --domZ 1 --max bpti.hmm $tmpfile >bpti_set_2_false_negatives.txt
 rm -v $tmpfile
 
 
+#dump into 1 file
+hmmsearch -Z 1 --domZ 1 --max bpti.hmm <(cat $tmpfile $tmpfile2 $tmpfile3 $tmpfile4) >bpti_all_false.txt
+
+hmmsearch -Z 1 --domZ 1 --max --noali bpti.hmm <(cat $tmpfile $tmpfile2 $tmpfile3 $tmpfile4) >bpti_all_false_noali.txt
+
+
+
 : 'Note:
 A glaring error has been found when comparing the e-value of set 1 false negatives
 when redoing the hmmsearch.
@@ -248,6 +255,9 @@ following metadata:
 This tells me that the "-Z 1 --domZ 1 --max" options were not included and, as
 such, e-values are not normalized.
 
+16 may:
+To add all into one file do as the last instruction, creating multiple
+tmp files instead of rewritten the same one
 
 '
 
@@ -264,3 +274,8 @@ for i in 1e-3 1e-4 1e-5 1e-6 1e-7 1e-8 1e-9 1e-10 1e-11 1e-12; do ../scripts/acc
 sort -gk6 ext_opt-table-1.txt|less
 sort -gk6 ext_opt-table-2.txt|less
 sort -gk6 ext_opt-table-concatenated.txt|less
+
+
+#PARENTHESIS
+#Getting alignment in table format
+awk '{if (substr($0,1,1)==">") {printf "%s",$0} else {printf " %s\n",$0}}' struct_alignment_corrected_header.seq |less #all in 2 columns
